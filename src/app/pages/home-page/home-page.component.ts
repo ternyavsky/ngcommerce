@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { SalebarComponent } from '../../widgets/components/salebar/salebar.component';
 import { HeaderComponent } from '../../widgets/components/header/header.component';
 import { SearchbarComponent } from '../../widgets/components/searchbar/searchbar.component';
+import { MainScreenComponent } from '../../features/main-screen/main-screen.component';
 
 @Component({
   selector: 'app-home-page',
@@ -9,6 +10,7 @@ import { SearchbarComponent } from '../../widgets/components/searchbar/searchbar
   imports: [
     SalebarComponent,
     HeaderComponent,
+    MainScreenComponent
   ],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.scss'

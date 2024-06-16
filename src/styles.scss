@@ -25,4 +25,8 @@
   .layout {
     @apply md:px-[100px]
   }
+
+  .parag {
+    @apply font-satoshi opacity-75 mt-7
+  }
 }
