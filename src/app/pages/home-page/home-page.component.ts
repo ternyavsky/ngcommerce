@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { SalebarComponent } from '../../widgets/components/salebar/salebar.component';
 import { HeaderComponent } from '../../widgets/components/header/header.component';
-import { SearchbarComponent } from '../../widgets/components/searchbar/searchbar.component';
 import { MainScreenComponent } from '../../features/main-screen/main-screen.component';
+import { MarqueComponent } from '../../features/marque/marque.component';
+import { ArrivalsScreenComponent } from '../../features/arrivals-screen/arrivals-screen.component';
 
 @Component({
   selector: 'app-home-page',
@@ -10,7 +11,9 @@ import { MainScreenComponent } from '../../features/main-screen/main-screen.comp
   imports: [
     SalebarComponent,
     HeaderComponent,
-    MainScreenComponent
+    MainScreenComponent,
+    MarqueComponent,
+    ArrivalsScreenComponent
   ],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.scss'
