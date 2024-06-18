@@ -29,4 +29,8 @@
   .parag {
     @apply font-satoshi opacity-75
   }
+
+  .flex-center {
+    @apply flex justify-center items-center
+  }
 }

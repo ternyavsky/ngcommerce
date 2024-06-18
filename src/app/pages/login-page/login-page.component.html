@@ -1,0 +1,19 @@
+<div class="flex flex-col items-center bg-[#F0F0F0] w-fit md:w-[700px]  m-auto rounded-[50px] h-[500px] my-16">
+  <h1 class="font-integral text-4xl p-4 mt-4">Login</h1>
+  <form action="" class="bg-[#F0F0F0] mt-10 rounded-full p-5 flex flex-col" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <label class="ml-2">
+      Username
+    </label>
+    <input formControlName="username" type="text" placeholder="Enter username..."
+      class="bg-[#F0F0F0] border-2 border-opacity-40 rounded-full p-2">
+    <label class="ml-2 mt-8">
+      Passwordf
+    </label>
+    <input formControlName="password" type="password" placeholder="Enter password..."
+      class="bg-[#F0F0F0] border-2 border-opacity-40 rounded-full p-2">
+    <div class="justify-center flex mt-3">
+      <app-outline-btn width="200" value="Login"></app-outline-btn>
+    </div>
+
+  </form>
+</div>

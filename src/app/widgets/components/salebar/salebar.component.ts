@@ -10,6 +10,11 @@ import { CloseIconComponent } from '../../../icons/close-icon/close-icon.compone
   styleUrl: './salebar.component.scss'
 })
 export class SalebarComponent {
-  public isShow = signal<boolean>(true);
+  public isShow = false;
+  // public isShow = signal<boolean>(true);
+  //
+  setShow(): void{
+    this.isShow = true;
+  }
 
 }

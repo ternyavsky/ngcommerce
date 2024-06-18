@@ -4,6 +4,7 @@ import { HeaderComponent } from '../../widgets/components/header/header.componen
 import { MainScreenComponent } from '../../features/main-screen/main-screen.component';
 import { MarqueComponent } from '../../features/marque/marque.component';
 import { ArrivalsScreenComponent } from '../../features/arrivals-screen/arrivals-screen.component';
+import { MailbarComponent } from '../../widgets/components/mailbar/mailbar.component';
 
 @Component({
   selector: 'app-home-page',
@@ -13,7 +14,8 @@ import { ArrivalsScreenComponent } from '../../features/arrivals-screen/arrivals
     HeaderComponent,
     MainScreenComponent,
     MarqueComponent,
-    ArrivalsScreenComponent
+    ArrivalsScreenComponent,
+    MailbarComponent
   ],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.scss'

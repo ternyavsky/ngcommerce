@@ -1,28 +1,29 @@
-<div class="bg-[#F0F0F0] layout flex h-screen">
-  <div class="pt-[103px] w-1/2 relative z-10">
-    <h2 class="text-wrap font-integral text-7xl font-bold uppercase leading-[1] tracking-wider">find clothes that
+<div class="bg-[#F0F0F0] layout md:flex h-screen p-4 md:layout ">
+  <div class="pt-[103px] md:w-1/2 md:relative z-10 flex flex-col ">
+    <h2 class="text-wrap font-integral md:text-7xl font-bold uppercase leading-[1] tracking-wider">find clothes that
       matches your style</h2>
     <p class="parag mt-7">Browse through our diverse range of meticulously crafted garments,
       designed to bring out your individuality and
 
       cater to your sense of style.</p>
-    <div class="mt-[32px]">
+    <div class="mt-[32px] justify-center md:justify-start" (click)="scrollEl('arrives')">
+
       <app-black-btn width="210" class=""></app-black-btn>
     </div>
-    <div class="grid grid-cols-3 mt-14">
+    <div class="grid md:grid-cols-3 grid-cols-2 mt-14 gap-4 justify-items-center md:justify-items-start">
       <div class="flex flex-col">
-        <h1 class="text-black font-normal font-integral text-5xl">200+</h1>
+        <h1 class="text-black font-normal font-integral md:text-5xl">200+</h1>
         <p class="parag mt-7">International Brands</p>
       </div>
       <div class="flex flex-col">
-        <h1 class="text-black font-normal font-integral text-5xl">2,000+</h1>
+        <h1 class="text-black font-normal font-integral md:text-5xl">2,000+</h1>
         <p class="parag mt-7">High-Quality Products</p>
       </div>
-      <div class="flex flex-col">
-        <h1 class="text-black font-normal font-integral text-5xl">30,000+</h1>
+      <div class="flex flex-col col-span-2 md:col-span-1 justify-self-center ">
+        <h1 class="text-black font-normal font-integral md:text-5xl">30,000+</h1>
         <p class="parag mt-7">Happy Customers</p>
       </div>
     </div>
   </div>
-  <img src="/assets/peoples.svg" alt="" class="absolute  items-center right-0 h-fit w-full">
+  <img src="/assets/peoples.svg" alt="" class="md:absolute hidden  md:block items-center md:right-0 md:h-fit md:w-full">
 </div>

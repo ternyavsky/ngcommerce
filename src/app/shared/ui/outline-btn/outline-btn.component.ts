@@ -9,6 +9,7 @@ import { Component, Input } from '@angular/core';
 })
 export class OutlineBtnComponent {
   @Input({ required: true }) width = "0";
+  @Input() value = "View All";
 
 
 }

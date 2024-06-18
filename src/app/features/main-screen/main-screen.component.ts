@@ -12,4 +12,8 @@ import { BlackBtnComponent } from '../../shared/ui/black-btn/black-btn.component
 })
 export class MainScreenComponent {
 
+  scrollEl($element: any): void {
+    (document.getElementById($element) as HTMLElement)?.scrollIntoView({ behavior: "smooth", inline: "start", block: "start" })
+  }
+
 }
