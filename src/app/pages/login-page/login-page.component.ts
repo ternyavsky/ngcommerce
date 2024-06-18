@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { OutlineBtnComponent } from '../../shared/ui/outline-btn/outline-btn.component';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms'
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms'
+import { AuthService } from '../../services/auth/auth.service';
 
 @Component({
   selector: 'app-login-page',
@@ -10,13 +11,17 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms'
   styleUrl: './login-page.component.scss'
 })
 export class LoginPageComponent {
+  authService: AuthService = inject(AuthService);
   form = new FormGroup({
-    username: new FormControl<string | null>(null),
-    password: new FormControl<string | null>(null),
+    username: new FormControl<string>("", Validators.required),
+    password: new FormControl<string>("", Validators.required),
   })
 
   onSubmit(): void {
-    console.log(this.form.value)
+    if (this.form.valid) {
+      this.authService.login({ username: this.form.value.username!, password: this.form.value.password! })
+        .subscribe(val => console.log(val))
+    }
 
   }
 
