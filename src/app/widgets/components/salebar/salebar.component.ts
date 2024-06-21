@@ -1,6 +1,7 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { CloseIconComponent } from '../../../icons/close-icon/close-icon.component';
+import { AuthService } from '../../../services/auth/auth.service';
 
 @Component({
   selector: 'app-salebar',
@@ -10,11 +11,11 @@ import { CloseIconComponent } from '../../../icons/close-icon/close-icon.compone
   styleUrl: './salebar.component.scss'
 })
 export class SalebarComponent {
-  public isShow = false;
-  // public isShow = signal<boolean>(true);
+  public authService: AuthService = inject(AuthService);
+  public isShow = !this.authService.IsAuth;
   //
-  setShow(): void{
-    this.isShow = true;
+  setShow(): void {
+    this.isShow = false;
   }
 
 }
