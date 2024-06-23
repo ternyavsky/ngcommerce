@@ -1,7 +1,7 @@
 import { Injectable, inject } from '@angular/core';
 import { BaseService } from '../base/base.service';
 import { LoginReq, LoginRes } from './types/login.interface';
-import { Observable, tap } from 'rxjs';
+import { tap } from 'rxjs';
 import { CookieService } from "ngx-cookie-service";
 
 @Injectable({
@@ -29,8 +29,6 @@ export class AuthService extends BaseService {
     return this.baseInstance.post<LoginRes>(`${this.baseUrl}/auth/token`, formData).pipe(tap(value => {
       this.token = value.access_token
       this.refresh_token = value.refresh_token
-
-
       this.cookieSvc.set('access_token', this.token)
       this.cookieSvc.set('refresh_token', this.refresh_token)
     }))

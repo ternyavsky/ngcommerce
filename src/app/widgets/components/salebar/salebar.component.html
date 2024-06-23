@@ -1,1 +1,7 @@
+<div [class.unshow]="isShow == false"
+  class="w-screen bg-black h-[34px] flex justify-center items-center font-medium text-[10px] sm:text-[15px] text-white">
+  <h4 class="font-satoshi text-white">Sign up and get 20% off to your first order.</h4>
+  <a [routerLink]="['/login']" class="font-satoshi text-white underline ml-2">Sign Up Now</a>
+  <app-close-icon (click)="setShow()"
+    class="invisible md:visible mt-1 absolute right-10 cursor-pointer"></app-close-icon>
 </div>

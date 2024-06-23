@@ -9,7 +9,5 @@ export class AccountService extends BaseService {
 
   public getAccount() {
     return this.baseInstance.get(`${this.baseUrl}/account/me`).subscribe(res => console.log(res))
-
-
   }
 }
